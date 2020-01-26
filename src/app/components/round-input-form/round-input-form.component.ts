@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 import { MatchService } from '../../services/match-service';
 
@@ -11,8 +11,8 @@ import { MatchService } from '../../services/match-service';
 export class RoundInputFormComponent {
 
   public roundForm = new FormGroup({
-    first: new FormControl(''),
-    second: new FormControl('')
+    first: new FormControl('', [ Validators.required ]),
+    second: new FormControl('', [ Validators.required ])
   });
 
   constructor(

@@ -2,14 +2,17 @@
     <form [formGroup]="roundForm">
     
         <label>First Shot:
-            <input type="text" formControlName="first">
+            <input type="number" formControlName="first">
         </label>
     
         <label>Second shot:
-            <input type="text" formControlName="second">
+            <input type="number" formControlName="second">
         </label>
         
-        <button type="button" class="btn btn-primary" (click)="onSendResult()">Save</button>
+        <button 
+            type="button" class="btn btn-primary"
+            (click)="onSendResult()"
+            [disabled]="!roundForm.valid">Save</button>
     
     </form>
 </div>
