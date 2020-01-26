@@ -1,1 +1,15 @@
-
+<div class="container">
+    <form [formGroup]="roundForm">
+    
+        <label>First Shot:
+            <input type="text" formControlName="first">
+        </label>
+    
+        <label>Second shot:
+            <input type="text" formControlName="second">
+        </label>
+        
+        <button type="button" class="btn btn-primary" (click)="onSendResult()">Save</button>
+    
+    </form>
+</div>

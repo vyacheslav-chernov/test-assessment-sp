@@ -14,8 +14,8 @@ describe('Model for frames must exist', () => {
     });
 
     it('method addRound must exist, works and returns frames, score must be valid', () => {
-        expect(match.addRound).toBeTruthy();
-        const currentframes = match.addRound(testRound);
+        expect(match.addFrame).toBeTruthy();
+        const currentframes = match.addFrame(testRound);
         expect(currentframes).toBeTruthy();
         expect(currentframes.frames).toBeTruthy();
         expect(match.score.score).toEqual(firstResult.score);

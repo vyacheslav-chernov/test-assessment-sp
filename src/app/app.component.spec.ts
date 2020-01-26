@@ -1,4 +1,5 @@
 import { TestBed, async } from '@angular/core/testing';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { RoundInputFormComponent } from './components/round-input-form/round-input-form.component';
@@ -9,6 +10,7 @@ import { MatchService } from './services/match-service';
 describe('Main component', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports : [ ReactiveFormsModule ],
       declarations: [
         AppComponent,
         RoundInputFormComponent,

@@ -21,8 +21,8 @@ export class Match {
         return { score : this.framesInstance.reduce((prev: number, frame: Frame) => prev + frame.first + frame.second, 0) };
     }
 
-    public addRound(round: Frame): IFrames {
-        this.framesInstance.push(round);
+    public addFrame(frame: Frame): IFrames {
+        this.framesInstance.push(frame);
         return this.frames;
     }
  }

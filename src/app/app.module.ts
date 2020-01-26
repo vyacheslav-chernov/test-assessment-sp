@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { RoundInputFormComponent } from './components/round-input-form/round-input-form.component';
@@ -15,7 +16,9 @@ import { MatchService } from './services/match-service';
     MatchResultComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [
     MatchService,
