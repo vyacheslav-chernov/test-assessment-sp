@@ -22,8 +22,8 @@ export class RoundInputFormComponent {
   public onSendResult(): void {
     const controls = this.roundForm.controls;
     this.matchService.addFrameToCurrentMatch({
-      first: controls.first.value,
-      second: controls.second.value
+      first: Number.parseInt(controls.first.value),
+      second: Number.parseInt(controls.second.value)
     });
   }
 

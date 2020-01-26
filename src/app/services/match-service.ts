@@ -1,6 +1,6 @@
 import { Injectable, EventEmitter, OnDestroy } from '@angular/core';
 
-import { Match, Frame, IFrames } from '../models/frames';
+import { Match, Frame, IFrames, Score } from '../models/frames';
 
 @Injectable()
 export class MatchService implements OnDestroy {
@@ -12,6 +12,10 @@ export class MatchService implements OnDestroy {
     public addFrameToCurrentMatch(frame: Frame ): void {
         this.match = this.match || new Match();
         this.matchChanged.next(this.match.addFrame(frame));
+    }
+
+    public getScoreCurrentMatch(): Score {
+        return this.match.score;
     }
 
     public ngOnDestroy(): void {
