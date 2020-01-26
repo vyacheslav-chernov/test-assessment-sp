@@ -1,15 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { MatchService } from '../../services/match-service';
 
 @Component({
   selector: 'app-match-result',
   templateUrl: './match-result.component.html',
   styleUrls: ['./match-result.component.scss']
 })
-export class MatchResultComponent implements OnInit {
+export class MatchResultComponent {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+  constructor(
+    private matchService: MatchService
+  ) { }
 
 }

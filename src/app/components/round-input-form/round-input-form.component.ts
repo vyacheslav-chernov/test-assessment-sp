@@ -1,15 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { MatchService } from '../../services/match-service';
 
 @Component({
   selector: 'app-round-input-form',
   templateUrl: './round-input-form.component.html',
   styleUrls: ['./round-input-form.component.scss']
 })
-export class RoundInputFormComponent implements OnInit {
+export class RoundInputFormComponent {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+  constructor(
+    private matchService: MatchService
+  ) { }
 
 }

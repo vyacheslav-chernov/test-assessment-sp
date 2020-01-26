@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MatchResultComponent } from './match-result.component';
+import { MatchService } from '../../services/match-service';
 
 describe('MatchResultComponent', () => {
   let component: MatchResultComponent;
@@ -8,7 +9,10 @@ describe('MatchResultComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MatchResultComponent ]
+      declarations: [ MatchResultComponent ],
+      providers: [
+        MatchService,
+      ]
     })
     .compileComponents();
   }));
@@ -19,7 +23,7 @@ describe('MatchResultComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('MatchResultComponent should create', () => {
     expect(component).toBeTruthy();
   });
 });

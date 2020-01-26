@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { RoundInputFormComponent } from './round-input-form.component';
+import { MatchService } from '../../services/match-service';
 
 describe('RoundInputFormComponent', () => {
   let component: RoundInputFormComponent;
@@ -8,7 +9,10 @@ describe('RoundInputFormComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ RoundInputFormComponent ]
+      declarations: [ RoundInputFormComponent ],
+      providers: [
+        MatchService,
+      ]
     })
     .compileComponents();
   }));
@@ -19,7 +23,7 @@ describe('RoundInputFormComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('RoundInputFormComponent should create', () => {
     expect(component).toBeTruthy();
   });
 });

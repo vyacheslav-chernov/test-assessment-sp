@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { FrameListComponent } from './frame-list.component';
+import { MatchService } from '../../services/match-service';
 
 describe('FrameListComponent', () => {
   let component: FrameListComponent;
@@ -8,7 +9,10 @@ describe('FrameListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FrameListComponent ]
+      declarations: [ FrameListComponent ],
+      providers: [
+        MatchService,
+      ]
     })
     .compileComponents();
   }));
@@ -19,7 +23,7 @@ describe('FrameListComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('MatchResultComponent should create', () => {
     expect(component).toBeTruthy();
   });
 });
